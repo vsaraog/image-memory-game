@@ -2,9 +2,8 @@ import React from "react"
 
 const Header = () => (
 <div className="jumbotron">
-  <h1>Bootstrap Tutorial</h1> 
-  <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive,
-  mobile-first projects on the web.</p> 
+  <h1>Image Memory Game</h1> 
+  <p>Click on the images to score points but don't click on any of them more than once!</p> 
 </div>
 )
 

@@ -2,11 +2,11 @@ import React from "react"
 
 const Navbar = props =>  (
     <nav className="navbar navbar-light bg-light" >
-    <span className="navbar-text">
+    <span className="navbar-text" onClick={props.resetGame}>
         Start
 </span>
 <span className="navbar-text">
-        {props.userMessage}
+        {props.currentScore > 0 ? "You guessed correctly" : "You guessed incorrectly"}
 </span>
 <span className="navbar-text">
         currentScore: {props.currentScore} | 
