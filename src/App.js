@@ -8,14 +8,14 @@ class App extends Component {
   state = {
     currentScore: 0,
     topScore: 0,
-    userMsg: ""
+    userMsg: "",
   }
 
-  resetGame() {
-    console.log("Reset game")
+  resetGame = () => {
+    window.location = "/"
   }
 
-  imageClicked(scores) {
+  imageClicked = (scores) => {
     this.setState({
       currentScore: scores.currentScore,
       topScore: scores.topScore,
@@ -27,9 +27,9 @@ class App extends Component {
       <div>
       <Navbar currentScore={this.state.currentScore} 
         topScore={this.state.topScore} 
-        resetGame={this.resetGame.bind(this)} />
+        resetGame={this.resetGame} />
       <Header />
-      <ImageList imageClicked={this.imageClicked.bind(this)} />
+      <ImageList imageClicked={this.imageClicked} />
       </div>
     )
   }

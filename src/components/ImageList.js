@@ -23,12 +23,12 @@ class ImageList extends Component {
         clickedButtons: []
     }
 
-    reset() {
-        this.setState({
-            topScore: 0,
-            clickedButtons: []
-        })
-    }
+    // reset() {
+    //     this.setState({
+    //         topScore: 0,
+    //         clickedButtons: []
+    //     })
+    // }
 
     randomNum(min, max, prec) {
         return (min + (Math.random() * (10 ** prec) / (10 ** prec) * (max - min))).toFixed(prec);
@@ -51,7 +51,7 @@ class ImageList extends Component {
         }
     }
 
-    buttonClicked(buttonId) {
+    buttonClicked = buttonId => {
         console.log(buttonId)
         this.shuffleButtons()
 
@@ -82,8 +82,8 @@ class ImageList extends Component {
 
     render() {
         return (
-        images.map(elem => {
-            return <ImageCard link={elem.link} buttonId={elem.id} buttonClicked={this.buttonClicked.bind(this)}/>
+        images.map( (elem) => {
+            return <ImageCard key={elem.id} link={elem.link} buttonId={elem.id} buttonClicked={this.buttonClicked}/>
         })
     )
     }

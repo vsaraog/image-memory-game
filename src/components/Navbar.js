@@ -6,7 +6,7 @@ const Navbar = props =>  (
         Start
 </span>
 <span className="navbar-text">
-        {props.currentScore > 0 ? "You guessed correctly" : "You guessed incorrectly"}
+        {props.topScore === 0 ? "Click an image to begin!" : (props.currentScore > 0 ? "You guessed correctly" : "You guessed incorrectly")}
 </span>
 <span className="navbar-text">
         currentScore: {props.currentScore} | 
